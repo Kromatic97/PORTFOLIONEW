@@ -1,0 +1,79 @@
+:root {
+    --tipo-titular:'Playfair Display', serif;
+    --tipo-principal:'Inter', sans-serif;
+   
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration:none;
+}
+
+
+
+.header{
+    width: 100%;
+    min-height: 5em;
+    background-color: lightblue;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+.header .h1{
+    
+}
+.header. h1. a{}
+
+.header .nav{
+   
+}
+.header .nav .ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; 
+}
+.header .nav .ul .li{
+    margin: 0 1em;
+}
+
+.header .nav .ul .li .a{}
+
+
+
+.main{}
+.seccion{}
+.seccion .circulos{}
+.seccion .circulo{}
+.seccion .h2{}
+.seccion .h3{}
+
+.seccion .p{}
+.seccion .grid{}
+.seccion .article{}
+.seccion .a{}
+.seccion .figure{}
+.seccion .img{}
+.seccion .h4{}
+
+.about{}
+.about .h2{}
+.about .p{}
+
+.about .rrss{}
+.about .rrss .li{}
+.apout .rrss .li .a{}
+.about .rrss .li .a .svg{}
+
+
+
+
+
+
+
