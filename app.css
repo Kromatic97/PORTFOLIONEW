@@ -11,24 +11,102 @@
     text-decoration:none;
 }
 
+body{
+    font-family: var(--tipo-principal);
+    font-size: 100%;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    font-smooth: always;
+
+}
+
+
+.circulos{
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    left:0;
+    
+    z-index: -2;
+    filter: blur(70px);
+    animation: circulo1 20s linear infinite both;
+}
+
+.circulos .circulo{
+position: absolute;
+width: 50%;
+height: 50%;
+animation: circulo1 50s linear infinite both;
+
+}
+
+.circulos .circulo1{
+    top: 0%;
+    left: 0%;
+    
+}
+
+
+
+.circulos .circulo1 .path{
+    
+    fill:  seagreen;
+}
+
+
+.circulos .circul2{
+    top: 0%;
+    right: 0%;
+}
+
+.circulos .circulo2 .path{
+
+    fill: #ea3394fb;
+}
+
+
+.circulos .circulo3{
+
+    bottom: 0%;
+    left: 0%;
+}
+
+
+.circulos .circulo3 .path{
+    fill: rgb(218, 209, 39);
+}
+
+.circulos .circulo4{
+    bottom: 0%;
+    right: 0%;
+}
+
+.circulos .circulo4 .path{
+    fill:rgb(15, 15, 188);
+}
+
 
 
 .header{
     width: 100%;
     min-height: 5em;
     background-color: lightblue;
-
+    padding: 1em 2em;
+   
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 2em;
+    display: none;
+    
 }
 
 .header .h1{
     
 }
-.header. h1. a{}
+.header .h1 .a{}
 
 .header .nav{
    
@@ -47,29 +125,209 @@
 
 
 
-.main{}
-.seccion{}
-.seccion .circulos{}
-.seccion .circulo{}
-.seccion .h2{}
-.seccion .h3{}
+.main{
+    background: rgba(0, 0, 0, 0.75);
+    margin: 0 0 1em;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.seccion{
+    width: 100%;
+    min-height: 80vh;
+  
+    margin: 1em 0;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.seccion .ul{
+    margin: 2em 0 0em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.seccion .ul .li{
+    /* background-color: limegreen; */
+    margin: 1em;
+    
+    
+}
+.seccion .ul .b{
+    border-top: 1px solid rgba(0,0,0,.7);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+     font-family: var(--tipo-principal);
+     padding: 1em 1em 1em;  
+     transition: all .3s ease; 
+}
+
+.seccion .ul .b:hover{
+    background-color: rgba(255, 255, 255, 0.76);
+    color: black;
+}
+
+.seccion .h2{
+    font-family: var(--tipo-titular);
+    font-size: 5em;
+    font-weight: 600;
+}
+.seccion .h3{
+    font-family: var(--tipo-titular);
+    font-size: 3em;
+    font-style: italic;
+}
+
 
 .seccion .p{}
-.seccion .grid{}
-.seccion .article{}
+.seccion .grid{
+    width: 90%;
+    max-width: 40em;
+
+    display: grid;
+    grid-template-columns:repeat( auto-fit , minmax( 10rem, 1fr));
+    gap:1em;
+    margin: 1em 0;
+}   
+
+
+.seccion .article{
+    width: 100%;
+    min-height: 20vh;
+   
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow:hidden;
+    
+  
+}
 .seccion .a{}
-.seccion .figure{}
-.seccion .img{}
-.seccion .h4{}
 
-.about{}
-.about .h2{}
-.about .p{}
 
-.about .rrss{}
-.about .rrss .li{}
+.seccion .img{
+    object-fit:contain;
+     width:100%;
+     height: 100%;
+}
+
+
+.seccion .grid .article .h4{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    backdrop-filter: blur(1rem);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1.4em;
+    
+        
+   
+    font-family: var(--tipo-titular);
+    font-style: italic;
+    opacity: 0;
+    /* transform:translateX(100%); */
+    transition: all .8s ease;
+    transform: translateZ(1) scale(1.1);
+}
+
+
+
+.seccion .grid .article :hover .h4{
+   opacity: 1;
+   /* transform:translateX(0%); */
+   transform: translateZ(1) scale(1);
+   
+}
+
+.works{
+    background: rgba(0, 0, 0, 0.7);
+   
+    color: white;
+    
+
+}
+
+.works .h2{
+
+    margin: 0 0 1rem;
+    color: white;
+
+}
+
+
+.about{
+    
+}
+.about .h2{
+    margin:0 0 1em;
+}
+.about .p{
+    width: 40rem;
+    margin:0 0 2rem;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.about .rrss{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about .rrss .li{
+ 
+    margin: 0 1em;
+
+}
 .apout .rrss .li .a{}
-.about .rrss .li .a .svg{}
+
+
+.svg{
+    color: black;
+    font-size: 45px;
+}
+
+.footer{
+
+text-align: center;
+padding: 2em 0;
+color: white;
+z-index: 2;
+}
+
+.footer .span{
+
+}
+
+
+@keyframes circulo1{
+    from{
+        transform: rotate(0deg) scale(3);
+    }
+    to{
+        transform: rotate(360deg) scale(3);
+    }
+}
 
 
 
